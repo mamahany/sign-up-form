@@ -1,0 +1,154 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(Norse-Bold.otf);
+    font-weight: normal;
+}
+:root{
+    --primary-color: #596D48;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.cover{
+    background: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.logo{
+    background-color: rgba(0, 0, 0, 0.418);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+.logo img{
+    width: 80px;
+}
+.logo p{
+    font-family: norse-bold;
+    font-size: 64px;
+}
+
+.form-container{
+    width: 61%;
+    background-color: hsl(210deg 20% 98.04%);
+}
+
+.form-container .text{
+    font-size: 12px;
+    width: 620px;
+    padding: 30px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: white;
+    padding: 50px 25px 25px;
+    position: relative;
+    color: rgb(44, 44, 44);
+    border: none;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+legend{
+    position: absolute;
+    top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+fieldset div{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    padding: 3px;
+    padding-left: 5px;
+    outline: none;
+}
+label{
+    font-size: 10px;
+}
+input:focus{
+    border: 1px solid rgb(71, 71, 255);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input:invalid{
+    border: 1px solid red;
+}
+
+button{
+    margin: 0px 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.form-container p a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+.form-container p{
+    font-size: 12px;
+    margin: 25px 30px;
+}
+
+.credit{
+    align-self:center;
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 10px;
+}
+.credit a{
+    color: white;
+}
+#password-div::after{
+    content: var(--after-content, "");
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+@media only screen and (max-width:600px) {
+    body{
+        flex-direction: column;
+    }
+    .cover{
+        width: 100vw;
+    }
+    .cover .credit{
+        top: 5px;
+    }
+    .form-container{
+        width: 100vw;
+    }
+    .form-container .text{
+        width: 100%;
+    }
+}
